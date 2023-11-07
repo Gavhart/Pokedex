@@ -19,6 +19,60 @@ main {
     padding: 15px;
     position: relative;
 }
+.pokemon-list-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000; 
+}
+
+.pokemon-list-container {
+    width: 80%;
+    max-width: 600px;
+    max-height: 70vh;  /* This ensures the container doesn't occupy more than 70% of the viewport height */
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-y: auto;  /* This allows vertical scrolling */
+}
+/* Style the scrollbar */
+.pokemon-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.pokemon-list-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+}
+
+.pokemon-list-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+
+.close-button {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 5px 15px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pokemon-list li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
 
 .pokedex {
     width: 100%;
